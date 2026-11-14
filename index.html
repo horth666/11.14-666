@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#fbf4ed" />
+  <title>测测你的涩女程度</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <main class="app-shell" id="app">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="floating-decor decor-heart decor-heart-one" aria-hidden="true">♥</div>
+    <div class="floating-decor decor-heart decor-heart-two" aria-hidden="true">♡</div>
+    <div class="floating-decor decor-star decor-star-one" aria-hidden="true">✦</div>
+    <div class="floating-decor decor-star decor-star-two" aria-hidden="true">✧</div>
+
+    <section class="view home-view is-active" id="homeView" aria-labelledby="homeTitle">
+      <div class="home-topline"><span>VOL. 01</span><span>LOVE NOTES</span></div>
+      <div class="home-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A LITTLE LOVE TEST <span class="eyebrow-line"></span></p>
+        <div class="title-wrap">
+          <span class="title-stamp">SECRET</span>
+          <h1 id="homeTitle">测测你的<br /><em>涩女</em>程度</h1>
+          <span class="title-sparkle">✦</span>
+        </div>
+        <p class="home-subtitle">别装了，看看你的真实涩度有几级。</p>
+        <p class="home-intro">你以为自己很纯情？<br />还是只是隐藏得比较好？</p>
+      </div>
+      <div class="home-art" aria-hidden="true">
+        <div class="halo halo-back"></div>
+        <div class="halo halo-front"></div>
+        <div class="bow bow-large"><span></span><span></span><i></i></div>
+        <div class="perfume-bottle"><div class="perfume-cap"></div><div class="perfume-neck"></div><div class="perfume-glass"><span>♡</span></div><div class="perfume-shadow"></div></div>
+        <div class="art-caption">FRAGILE<br /><b>FEELINGS</b></div>
+      </div>
+      <div class="home-action">
+        <button class="primary-btn" id="startBtn" type="button"><span>开始测测</span><b>→</b></button>
+        <p class="tiny-note">12 道暧昧小题 · 约 2 分钟</p>
+      </div>
+      <div class="home-footer"><span>© 2026</span><span>心动研究所</span><span>♡</span></div>
+    </section>
+
+    <section class="view quiz-view" id="quizView" aria-labelledby="questionText" aria-hidden="true">
+      <header class="quiz-header">
+        <button class="icon-btn" id="quizBackBtn" type="button" aria-label="返回首页">←</button>
+        <div class="quiz-brand">LOVE NOTES <span>·</span> 01</div>
+        <span class="question-count" id="questionCount">01 / 12</span>
+      </header>
+      <div class="progress-wrap"><div class="progress-track"><div class="progress-bar" id="progressBar"></div></div></div>
+      <div class="quiz-content">
+        <p class="question-kicker" id="questionKicker">Q. 01 · 暧昧聊天</p>
+        <h2 class="question-text" id="questionText"></h2>
+        <div class="question-orbit" aria-hidden="true"><span>♡</span><i></i><b>✦</b></div>
+        <div class="options" id="options"></div>
+      </div>
+      <footer class="quiz-footer">
+        <button class="back-question-btn" id="prevBtn" type="button"><span>←</span> 上一题</button>
+        <span class="swipe-hint">选一个最像你的</span>
+      </footer>
+    </section>
+
+    <section class="view reveal-view" id="revealView" aria-hidden="true">
+      <div class="reveal-kicker">YOUR LOVE REPORT</div>
+      <div class="reveal-burst" aria-hidden="true"><span>✦</span><i>♡</i><b>✧</b></div>
+      <p class="reveal-pretitle">答案收到了</p>
+      <h2>正在拆开<br /><em>你的秘密</em></h2>
+      <div class="reveal-seal">SHH<br /><span>♡</span></div>
+      <p class="reveal-footnote">别眨眼，马上揭晓</p>
+    </section>
+
+    <section class="view result-view" id="resultView" aria-labelledby="resultTitle" aria-hidden="true">
+      <header class="result-header">
+        <button class="icon-btn" id="resultHomeBtn" type="button" aria-label="返回首页">×</button>
+        <div class="quiz-brand">LOVE NOTES <span>·</span> REPORT</div>
+        <button class="share-mini" id="shareMiniBtn" type="button">分享</button>
+      </header>
+      <div class="result-scroll">
+        <div class="result-hero">
+          <p class="result-overline">你的涩度报告</p>
+          <div class="result-number"><span id="scoreNumber">0</span><small>/100</small></div>
+          <p class="result-index-label">涩度指数</p>
+          <div class="result-ribbon"><span id="resultTierTag">LEVEL 01</span><i></i></div>
+          <h1 id="resultTitle"></h1>
+          <p class="result-tease" id="resultTease"></p>
+        </div>
+        <div class="result-paper">
+          <div class="paper-top"><span>LOVE NOTES · PERSONAL REPORT</span><span id="reportNo">NO. 001</span></div>
+          <p class="analysis-label">/ 你的隐藏属性</p>
+          <p class="result-description" id="resultDescription"></p>
+          <div class="analysis-grid">
+            <div><span>性格特点</span><p id="personality"></p></div>
+            <div><span>恋爱中的你</span><p id="inLove"></p></div>
+          </div>
+          <div class="quote-box"><span>“</span><p id="resultQuote"></p><span>”</span></div>
+          <div class="paper-stamp">CERTIFIED<br /><b>心动</b></div>
+        </div>
+        <div class="result-actions">
+          <button class="primary-btn" id="saveBtn" type="button"><span>保存我的涩度报告</span><b>↓</b></button>
+          <button class="text-btn" id="retryBtn" type="button">再测一次 <span>↗</span></button>
+          <p class="save-tip" id="saveTip">会生成一张 3:4 高清长图，适合发给闺蜜</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./assets/main.js"></script>
+</body>
+</html>
